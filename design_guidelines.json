@@ -1,0 +1,121 @@
+{
+  "theme": {
+    "archetype": "4 (Swiss & High-Contrast - Achromatic Minimalist)",
+    "mode": "light/dark",
+    "description": "A highly functional, achromatic dashboard design inspired by Zenith and SaaSFrame patterns. It uses neutral colors, stark black/white contrasts, generous whitespace, and minimal text to let data (charts/tables) take center stage. 'Soft shadows' are paired with 1px sharp borders to maintain crispness."
+  },
+  "typography": {
+    "strategy": "Swiss Brutalist (Tech/Art) - Radical weight contrast",
+    "fonts": {
+      "heading": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-4xl tracking-tighter font-light",
+      "h2": "text-2xl tracking-tight font-medium",
+      "h3": "text-xl font-medium",
+      "h4": "text-lg font-medium",
+      "body": "text-sm leading-relaxed",
+      "overline": "text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground",
+      "data_large": "text-3xl font-light tracking-tighter font-mono",
+      "data_small": "text-sm font-mono"
+    },
+    "installation": "Add Google Fonts imports for Outfit, Manrope, and JetBrains Mono in index.css"
+  },
+  "colors": {
+    "light": {
+      "background": "#F8F9FA",
+      "surface": "#FFFFFF",
+      "primary": "#09090B",
+      "primary_foreground": "#FAFAFA",
+      "border": "#E4E4E7",
+      "muted": "#F4F4F5",
+      "muted_foreground": "#71717A",
+      "success": "#10B981",
+      "success_bg": "#D1FAE5",
+      "danger": "#EF4444",
+      "danger_bg": "#FEE2E2"
+    },
+    "dark": {
+      "background": "#0A0A0B",
+      "surface": "#121214",
+      "primary": "#FAFAFA",
+      "primary_foreground": "#09090B",
+      "border": "#27272A",
+      "muted": "#18181B",
+      "muted_foreground": "#A1A1AA",
+      "success": "#34D399",
+      "success_bg": "rgba(16, 185, 129, 0.1)",
+      "danger": "#F87171",
+      "danger_bg": "rgba(239, 68, 68, 0.1)"
+    }
+  },
+  "surfaces": {
+    "cards": {
+      "base": "rounded-xl border",
+      "light": "bg-white border-zinc-200 shadow-[0_4px_24px_rgba(0,0,0,0.02)]",
+      "dark": "bg-[#121214] border-zinc-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]",
+      "hover": "transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.04)]"
+    },
+    "header": {
+      "style": "Glassmorphism (Crystal)",
+      "classes": "sticky top-0 z-50 backdrop-blur-xl bg-white/70 dark:bg-black/60 border-b border-zinc-200/50 dark:border-zinc-800/50"
+    }
+  },
+  "layout": {
+    "spacing": "Generous spacing. Use p-6, p-8, p-12 for containers.",
+    "grid": {
+      "mode": "Control Room Grid",
+      "container": "max-w-[1600px] mx-auto p-4 md:p-8 space-y-8",
+      "insights_row": "grid grid-cols-1 md:grid-cols-3 gap-6",
+      "charts_row": "grid grid-cols-1 lg:grid-cols-3 gap-6 (2 cols for Monthly Trends, 1 col for Category breakdown)"
+    }
+  },
+  "components": {
+    "table": {
+      "style": "Minimalist, row borders only. No vertical dividers.",
+      "header": "text-xs uppercase tracking-wider text-muted-foreground bg-muted/50",
+      "row_hover": "hover:bg-muted/50 transition-colors"
+    },
+    "buttons": {
+      "primary": "rounded-lg font-medium shadow-sm transition-all",
+      "secondary": "rounded-lg border bg-transparent hover:bg-muted"
+    },
+    "charts": {
+      "library": "Recharts",
+      "styling": "No grid lines or very faint dashed lines (strokeOpacity=0.1). Hide axis lines, keep only labels. Use stark monochrome with one accent color (e.g. primary vs muted) or distinct but muted categorical colors.",
+      "tooltip": "Custom tooltip mimicking the card surface styles."
+    }
+  },
+  "animations": {
+    "library": "framer-motion",
+    "page_load": "Staggered fade-up (y: 20, opacity: 0 -> y: 0, opacity: 1) for cards and table rows.",
+    "interactions": "Slight scale (0.98) on click, subtle y-axis lift on card hover.",
+    "transitions": "layoutId for role switching if applicable, or smooth opacity crossfade."
+  },
+  "images": {
+    "admin_avatar": {
+      "url": "https://images.unsplash.com/photo-1758600587839-56ba05596c69?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBwZXJzb24lMjBwb3J0cmFpdCUyMG5ldXRyYWwlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3NTM3NjE0OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Professional woman with glasses, used for Admin role avatar"
+    },
+    "user_avatar": {
+      "url": "https://images.unsplash.com/photo-1770058443069-e384cd001e9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwZXJzb24lMjBwb3J0cmFpdCUyMG5ldXRyYWwlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3NTM3NjE0OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Young woman, used for standard User role avatar"
+    },
+    "empty_state": {
+      "url": "https://images.pexels.com/photos/205321/pexels-photo-205321.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Minimalist empty workspace for 'No Data' or 'Empty Table' states"
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. STATE MANAGEMENT (Zustand): Create a store to manage 'transactions' (array of objects), 'role' (admin | user), 'filters' (category, date range, search query), and 'theme' (light | dark). Populate with realistic mock data on initialization.",
+    "2. DATA PERSISTENCE: Use Zustand's 'persist' middleware to save the state to localStorage.",
+    "3. RBAC IMPLEMENTATION: 'Admin' sees all transactions. 'User' sees only their own transactions. Reflect this in the table, insights, and charts dynamically based on the selected role.",
+    "4. HEADER / NAV: Create a crystal glass header containing the App Logo, a Dark Mode toggle, an Export Button (CSV/JSON), and the Role Switcher (dropdown with avatars).",
+    "5. EXPORT FUNCTIONALITY: Implement a simple utility to convert the currently filtered transactions into CSV format and trigger a download.",
+    "6. UI FRAMEWORK: Use Tailwind CSS with Shadcn UI components. For charts, integrate Recharts matching the color palette (monochrome + subtle accents).",
+    "7. TESTING ATTRIBUTES: Ensure all buttons, form inputs, table rows, and interactable elements have 'data-testid' attributes (e.g., 'data-testid=\"role-switcher\"').",
+    "8. EMPTY STATES: If a user filters out all data, show a beautiful empty state using the provided empty_state image, centered, with a 'Clear Filters' CTA."
+  ]
+}
